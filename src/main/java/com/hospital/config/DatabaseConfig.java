@@ -11,7 +11,7 @@ public class DatabaseConfig {
 
     private DatabaseConfig() {
         // Private constructor to prevent instantiation
-        String connectionString = "mongodb://localhost:27017";
+        String connectionString = "mongodb://localhost:27017/HOSPITAL_MANAGEMENT";
         mongoClient = MongoClients.create(connectionString);
         database = mongoClient.getDatabase("HOSPITAL_MANAGEMENT");
     }
