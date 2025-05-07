@@ -9,12 +9,9 @@ import com.hospital.services.AuthService;
 
 public class Application {
     public static void main(String[] args) {
-        // Initialize database connection (Singleton)
         DatabaseConfig.getInstance();
 
-        // Initialize AuthService (Singleton)
 
-        // Initialize controllers
         new SparkConfig();
         new AuthController();
         new ClerkController();

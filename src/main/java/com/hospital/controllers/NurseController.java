@@ -23,7 +23,6 @@ public class NurseController {
         this.nurseService = new NurseService();
         this.authService = new AuthService();
 
-        // Configure Gson to handle dates properly
         this.gson = new GsonBuilder()
                 .setDateFormat("yyyy-MM-dd HH:mm")
                 .create();
@@ -32,7 +31,6 @@ public class NurseController {
     }
 
     private void setupRoutes() {
-        // Middleware to check for nurse authorization
         before("/api/nurse/*", (request, response) -> {
             String authHeader = request.headers("Authorization");
             if (authHeader == null) {
@@ -50,7 +48,6 @@ public class NurseController {
             }
         });
 
-        // Get patients scheduled for vitals
         get("/api/nurse/scheduled-patients", (request, response) -> {
             try {
                 List<Patient> patients = nurseService.getScheduledPatients();
@@ -61,7 +58,6 @@ public class NurseController {
             }
         });
 
-        // Record vitals for a patient
         post("/api/nurse/record-vitals", (request, response) -> {
             try {
                 User nurse = request.attribute("user");

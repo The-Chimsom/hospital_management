@@ -20,7 +20,6 @@ public class AuthController {
     }
 
     private void setupRoutes() {
-        // Login endpoint
         post("/api/auth/login", (request, response) -> {
             try {
                 Map<String, String> body = gson.fromJson(request.body(), Map.class);
@@ -38,7 +37,6 @@ public class AuthController {
             }
         });
 
-        // Register endpoint
         post("/api/auth/register", (request, response) -> {
             try {
                 Map<String, String> body = gson.fromJson(request.body(), Map.class);

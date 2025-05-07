@@ -10,7 +10,6 @@ public class Nurse extends User {
         this.department = department;
     }
 
-    // Getters and setters
     public String getNurseId() {
         return nurseId;
     }
