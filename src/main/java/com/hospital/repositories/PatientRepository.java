@@ -1,13 +1,13 @@
 
 package com.hospital.repositories;
 
-import com.hospital.config.DatabaseConfig;
+import com.hospital.DatabaseConfig;
 import com.hospital.models.Patient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
-import org.bson.types.ObjectId;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

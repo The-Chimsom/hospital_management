@@ -1,4 +1,4 @@
-package com.hospital.config;
+package com.hospital;
 
 import static spark.Spark.*;
 

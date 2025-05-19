@@ -1,4 +1,4 @@
-package com.hospital.config;
+package com.hospital;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -16,11 +16,12 @@ public class DatabaseConfig {
         database = mongoClient.getDatabase("HOSPITAL_MANAGEMENT");
     }
 
-    public static synchronized DatabaseConfig getInstance() {
-        if (instance == null) {
-            instance = new DatabaseConfig();
-        }
-        return instance;
+    private static class DatabaseConfigHolder{
+        public static final DatabaseConfig instance = new DatabaseConfig();
+    }
+
+    public static DatabaseConfig getInstance() {
+        return DatabaseConfigHolder.instance;
     }
 
     public MongoDatabase getDatabase() {

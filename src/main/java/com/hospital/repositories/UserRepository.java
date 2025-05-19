@@ -1,6 +1,6 @@
 package com.hospital.repositories;
 
-import com.hospital.config.DatabaseConfig;
+import com.hospital.DatabaseConfig;
 import com.hospital.models.User;
 import com.hospital.models.Nurse;
 import com.hospital.models.Clerk;

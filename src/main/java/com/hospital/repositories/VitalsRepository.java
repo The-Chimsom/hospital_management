@@ -1,6 +1,6 @@
 package com.hospital.repositories;
 
-import com.hospital.config.DatabaseConfig;
+import com.hospital.DatabaseConfig;
 import com.hospital.models.VitalsRecord;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
